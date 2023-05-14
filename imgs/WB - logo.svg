@@ -1,0 +1,18 @@
+<svg id="WB_-_logo" data-name="WB - logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="99.502" height="48.996" viewBox="0 0 99.502 48.996">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_19" data-name="Rectangle 19" width="99.502" height="48.996"/>
+    </clipPath>
+  </defs>
+  <path id="Path_716" data-name="Path 716" d="M45,.067l-3.86,37.45-1.25,0L35.563.067h-15.8L10.84,37.514H9.613V.067H0V49.041H17.439l9.075-37.48,1.571.006,4,37.474H49.849L55.334.067Z" transform="translate(0 -0.046)"/>
+  <g id="Group_26" data-name="Group 26">
+    <g id="Group_25" data-name="Group 25" class="cls-1">
+      <path id="Path_717" data-name="Path 717" d="M175.918,0h25.626c9.028,0,13.414,6.511,12.716,12.924-.808,7.423-6.494,9.575-9.863,10.214l-.128,1.155c4.275.573,10.051,3.514,8.895,12.163S205.192,49,198.065,49h-28.22Zm8.76,19.69H196.9c3.721,0,5.883-2.03,6.461-5.684.6-3.817-1.2-5.615-3.99-5.615H185.977l.144-.068ZM182.119,40.6h13.19c3.971,0,5.751-2.8,6.267-5.8.732-4.256-1.217-6.487-4.424-6.487H183.688Z" transform="translate(-114.83)"/>
+    </g>
+  </g>
+</svg>

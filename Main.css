@@ -1,11 +1,19 @@
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+}
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 0.4s linear 1.3s forwards;
-  -webkit-animation: changeBgColor 0.4s linear 0.5s forwards;
+  animation: changeBgColor 1.2s linear 1s forwards;
+  -webkit-animation: changeBgColor 1.2s linear 1s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 @keyframes changeBgColor {
   0% {
@@ -46,10 +54,12 @@ body {
     opacity: 100%;
     filter: blur(2px);
     -webkit-filter: blur(2px);
+    fill: black;
   }
   30% {
     filter: blur(1px);
     -webkit-filter: blur(1px);
+    fill: black;
   }
   50% {
     opacity: 100%;
@@ -57,15 +67,18 @@ body {
     filter: blur(0.6px);
     -webkit-filter: blur(0.6px);
     transition-delay: 50s;
+    fill: black;
   }
   60% {
     filter: blur(0px);
     -webkit-filter: blur(0px);
+    fill: rgb(255, 255, 255);
   }
   95% {
     opacity: 100%;
     animation-duration: 16s;
     transition-duration: 40s;
+    fill: rgb(255, 255, 255);
   }
   100% {
     filter: blur(3px);
@@ -99,14 +112,14 @@ body {
 }
 .grid-container {
   display: flex;
-  column-gap: 25px;
+  column-gap: 1.5625rem;
   margin: auto;
-  width: 1020px;
+  width: 63.75rem;
   overflow: hidden;
-  animation: appear 1s linear 1.3s forwards;
+  animation: appear 1s linear 1.5s forwards;
   z-index: 1;
   position: relative;
-  -webkit-animation: appear 1s linear 1.3s forwards;
+  -webkit-animation: appear 1s linear 1.5s forwards;
   opacity: 0;
 }
 @keyframes appear {
@@ -118,7 +131,7 @@ body {
   }
 }
 .grid-item {
-  margin-bottom: 46px;
+  margin-bottom: 2.875rem;
 }
 .img img {
   width: 100%;
@@ -128,7 +141,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: white;
-  margin: 15px 0px;
+  margin: 0.9375rem 0px;
 }
 .line {
   height: 1px;
@@ -169,16 +182,20 @@ body {
     -o-transform: translateY(0);
   }
   to {
-    transform: translateY(calc(-176px * 7));
-    -webkit-transform: translateY(calc(-176px * 7));
-    -moz-transform: translateY(calc(-176px * 7));
-    -ms-transform: translateY(calc(-176px * 7));
-    -o-transform: translateY(calc(-176px * 7));
+    transform: translateY(calc(-176px * 4));
+    -webkit-transform: translateY(calc(-176px * 4));
+    -moz-transform: translateY(calc(-176px * 4));
+    -ms-transform: translateY(calc(-176px * 4));
+    -o-transform: translateY(calc(-176px * 4));
   }
 }
 @keyframes runSliderThree {
   from {
-    transform: translate(0, -110rem);
+    transform: translate(0, -640px);
+    -webkit-transform: translate(0, -640px);
+    -moz-transform: translate(0, -640px);
+    -ms-transform: translate(0, -640px);
+    -o-transform: translate(0, -640px);
   }
   to {
     transform: translate(0, 0);

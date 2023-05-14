@@ -68,7 +68,7 @@ body {
   background-color: white;
   transition: background-color 1s;
   animation: changeBgColor 0.4s linear 1.3s forwards;
-  -webkit-animation: changeBgColor 0.4s linear 1.3s forwards;
+  -webkit-animation: changeBgColor 0.4s linear 0.5s forwards;
 }
 @keyframes changeBgColor {
   0% {
@@ -96,27 +96,67 @@ body {
   max-width: 100%;
   max-height: 100%;
   animation-name: fadeOutLogo;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-delay: 0.1s;
   opacity: 0;
   fill: black;
+  transition-duration: 1s;
 }
 
 @keyframes fadeOutLogo {
   0% {
     transform: scale(0);
     opacity: 100%;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  }
+  30% {
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
   }
   50% {
     opacity: 100%;
     transform: scale(5);
+    filter: blur(0.6px);
+    -webkit-filter: blur(0.6px);
+    transition-delay: 50s;
+  }
+  60% {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
   }
   95% {
     opacity: 100%;
+    animation-duration: 16s;
+    transition-duration: 40s;
   }
   100% {
+    filter: blur(3px);
     transform: scale(0);
     opacity: 100%;
     fill: white;
+    transition-duration: 5s;
+    -webkit-filter: blur(3px);
+  }
+}
+/* media queries */
+@media only screen and (max-width: 768px) {
+  /* styles for small screens */
+  .logo-container {
+    backdrop-filter: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* styles for medium screens */
+  .logo-container {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* styles for large screens */
+  .logo-container {
+    height: 100vh;
   }
 }

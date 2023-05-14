@@ -92,25 +92,23 @@ body {
   backdrop-filter: blur(100px);
 }
 
-.logo-container img {
+.logo-container svg {
   max-width: 100%;
   max-height: 100%;
   animation-name: fadeOutLogo;
   animation-duration: 3s;
   animation-delay: 0.1s;
   opacity: 0;
+  fill: black;
 }
 
 @keyframes fadeOutLogo {
   0% {
     transform: scale(0);
-    opacity: 0%;
-  }
-  5% {
-    opacity: 70%;
+    opacity: 100%;
   }
   50% {
-    opacity: 70%;
+    opacity: 100%;
     transform: scale(5);
   }
   95% {
@@ -119,5 +117,6 @@ body {
   100% {
     transform: scale(0);
     opacity: 100%;
+    fill: white;
   }
 }

@@ -14,6 +14,7 @@ body {
   -moz-transition: background-color 1s;
   -ms-transition: background-color 1s;
   -o-transition: background-color 1s;
+  overflow: hidden;
 }
 @keyframes changeBgColor {
   0% {
@@ -234,4 +235,97 @@ body {
 /* styles for desktop */
 @media screen and (min-width: 1024px) {
   /* adjust the styles here */
+}
+
+/* Overlaying */
+
+.columnOne-container {
+  position: relative;
+  z-index: 3;
+}
+.columnTwo-container {
+  position: relative;
+  z-index: 3;
+}
+.columnThree-container {
+  position: relative;
+  z-index: 3;
+}
+.overlayOne {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #1e1f1f;
+  z-index: 1;
+  box-shadow: 4px 20px 20px 20px #1e1f1f;
+  animation: overlayOne 1s 1s forwards;
+  -webkit-animation: overlayOne 1s 1s forwards;
+  opacity: 1;
+  z-index: 5;
+}
+@keyframes overlayOne {
+  0% {
+    height: 100%;
+    z-index: 5;
+  }
+  95% {
+    z-index: 0;
+  }
+  99% {
+    height: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.overlayTwo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #1e1f1f;
+  z-index: 1;
+  box-shadow: 0px -20px 20px 20px #1e1f1f;
+  animation: overlayTwo 1s 1.5s forwards;
+  -webkit-animation: overlayTwo 1s 1.5s forwards;
+  bottom: 0;
+  z-index: 5;
+}
+@keyframes overlayTwo {
+  0% {
+    height: 100%;
+  }
+  95% {
+    z-index: 0;
+  }
+  99% {
+    height: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.overlayThree {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #1e1f1f;
+  z-index: 1;
+  box-shadow: 4px 20px 20px 20px #1e1f1f;
+  animation: overlayThree 1s 2s forwards;
+  -webkit-animation: overlayThree 1s 2s forwards;
+  z-index: 5;
+}
+@keyframes overlayThree {
+  0% {
+    height: 100%;
+  }
+  95% {
+    z-index: 0;
+  }
+  99% {
+    height: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

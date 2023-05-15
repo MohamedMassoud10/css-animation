@@ -106,7 +106,7 @@ svg.six {
     -webkit-filter: blur(1px);
     opacity: 0;
   }
-  48.9% {
+  48.79% {
     filter: blur(0);
     -webkit-filter: blur(0);
     fill: rgb(255, 255, 255);
@@ -144,7 +144,7 @@ svg.six {
     -ms-transform: scale(5);
     -o-transform: scale(5);
   }
-  50.1% {
+  49.5% {
     fill: rgb(255, 255, 255);
   }
   100% {

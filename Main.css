@@ -5,8 +5,8 @@ html {
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 1.2s linear 1s forwards;
-  -webkit-animation: changeBgColor 1.2s linear 1s forwards;
+  animation: changeBgColor 0.5s linear 1.25s forwards;
+  -webkit-animation: changeBgColor 0.5s linear 1.25s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,42 +38,51 @@ body {
   backdrop-filter: blur(100px);
 }
 .logo-container svg {
+  position: absolute;
   max-width: 5rem;
   max-height: 5rem;
   animation-name: fadeOutLogo;
-  animation-duration: 1.5s;
-  animation-delay: 0.1s;
+  animation-duration: 2.5s;
+  animation-delay: 0.17s;
   animation-timing-function: cubic-bezier(0.24, 0.89);
   opacity: 0;
   fill: black;
-  transition-duration: 1s;
 }
 
+svg.two {
+  animation-delay: 0.2s;
+  max-width: 4.75rem;
+}
+svg.three {
+  animation-delay: 0.22s;
+  max-width: 4.875rem;
+}
+svg.four {
+  animation-delay: 0.24s;
+  max-width: 4.975rem;
+}
+svg.six {
+  animation-delay: 0.26s;
+  max-width: 5.075rem;
+}
 @keyframes fadeOutLogo {
   0% {
     transform: scale(0);
     opacity: 100%;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
     fill: black;
   }
   30% {
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
     fill: black;
   }
   50% {
     opacity: 100%;
     transform: scale(5);
-    filter: blur(0.6px);
-    -webkit-filter: blur(0.6px);
-    transition-delay: 50s;
     fill: black;
+    animation-duration: 3s;
   }
   60% {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
     fill: rgb(255, 255, 255);
+    animation-timing-function: cubic-bezier(0.87, 0.82);
   }
   95% {
     opacity: 100%;
@@ -82,12 +91,12 @@ body {
     fill: rgb(255, 255, 255);
   }
   100% {
-    filter: blur(3px);
     transform: scale(0);
     opacity: 100%;
     fill: white;
     transition-duration: 5s;
-    -webkit-filter: blur(3px);
+    animation-delay: 0;
+    opacity: 0;
   }
 }
 /* media queries */
@@ -111,6 +120,8 @@ body {
     height: 100vh;
   }
 }
+
+/* Start With Slide Styling */
 .grid-container {
   display: flex;
   column-gap: 1.5625rem;
@@ -232,11 +243,6 @@ body {
   }
 }
 
-/* styles for desktop */
-@media screen and (min-width: 1024px) {
-  /* adjust the styles here */
-}
-
 /* Overlaying */
 
 .columnOne-container {
@@ -273,14 +279,12 @@ body {
   }
   99% {
     height: 0;
+  }
+  99.5% {
     transform: scale(1);
   }
   100% {
     transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
   }
 }
 .overlayTwo {
@@ -304,14 +308,12 @@ body {
   }
   99% {
     height: 0;
+  }
+  99.5% {
     transform: scale(1);
   }
   100% {
     transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
   }
 }
 .overlayThree {
@@ -334,6 +336,8 @@ body {
   }
   99% {
     height: 0;
+  }
+  99.5% {
     transform: scale(1);
   }
   100% {

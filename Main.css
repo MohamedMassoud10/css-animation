@@ -5,8 +5,8 @@ html {
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 0.5s linear 5s forwards;
-  -webkit-animation: changeBgColor 0.5s linear 5s forwards;
+  animation: changeBgColor 0.5s linear 4s forwards;
+  -webkit-animation: changeBgColor 0.5s linear 4s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,14 +74,13 @@ svg.six {
   30% {
     fill: black;
   }
+  42.9% {
+    fill: rgb(255, 255, 255);
+  }
   50% {
     opacity: 100%;
     transform: scale(5);
-    fill: black;
     animation-duration: 3s;
-  }
-  60% {
-    fill: rgb(255, 255, 255);
   }
   94% {
     opacity: 0;

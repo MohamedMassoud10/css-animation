@@ -5,8 +5,8 @@ html {
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 0.5s linear 4s forwards;
-  -webkit-animation: changeBgColor 0.5s linear 4s forwards;
+  animation: changeBgColor 0.4s linear 1.1s forwards;
+  -webkit-animation: changeBgColor 0.4s linear 1.1s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,7 +42,7 @@ body {
   max-width: 5rem;
   max-height: 5rem;
   animation-name: fadeOutLogo;
-  animation-duration: 10s;
+  animation-duration: 2s;
   animation-delay: 0.17s;
   animation-timing-function: cubic-bezier(0.89, 1.49, 1, 0.48);
   opacity: 0;
@@ -71,34 +71,28 @@ svg.six {
     opacity: 0%;
     fill: black;
   }
-  30% {
-    fill: black;
-  }
-  42.9% {
-    fill: rgb(255, 255, 255);
-  }
-  50% {
+  49% {
     opacity: 100%;
     transform: scale(5);
     animation-duration: 3s;
+    fill: black;
+  }
+  50.1% {
+    fill: rgb(255, 255, 255);
   }
   94% {
+    transform: scale(0);
     opacity: 0;
   }
   95% {
-    opacity: 100%;
+    transform: scale(0);
     animation-duration: 16s;
     transition-duration: 40s;
     fill: rgb(255, 255, 255);
     opacity: 0;
   }
   100% {
-    transform: scale(0);
-    opacity: 100%;
     fill: white;
-    transition-duration: 5s;
-    animation-delay: 0;
-    opacity: 0;
   }
 }
 /* media queries */
@@ -125,15 +119,15 @@ svg.six {
 
 /* Start With Slide Styling */
 .grid-container {
-  display: none;
+  display: flex;
   column-gap: 1.5625rem;
   margin: auto;
   width: 63.75rem;
   overflow: hidden;
-  animation: appear 1s linear 2.5s forwards;
+  animation: appear 1s linear 2s forwards;
   z-index: 1;
   position: relative;
-  -webkit-animation: appear 1s linear 2.5s forwards;
+  -webkit-animation: appear 1s linear 2s forwards;
   opacity: 0;
 }
 @keyframes appear {
@@ -182,8 +176,8 @@ svg.six {
 }
 .columnThree,
 .columnOne {
-  animation: runSliderThree 4s ease-in-out infinite;
-  -webkit-animation: runSliderThree 4s ease-in-out infinite;
+  animation: runSliderThree 4s forwards infinite;
+  -webkit-animation: runSliderThree 4s forwards infinite;
   transition-delay: 1s;
   transition-duration: 40s;
 }
@@ -267,17 +261,12 @@ svg.six {
   z-index: 1;
   box-shadow: 4px 20px 20px 20px #1e1f1f;
   animation: overlayOne 2s 2s forwards;
-  -webkit-animation: overlayOne 2s 2s forwards;
+  -webkit-animation: overlayOne 1s 1.6s forwards;
   opacity: 1;
-  z-index: 5;
 }
 @keyframes overlayOne {
   0% {
     height: 100%;
-    z-index: 5;
-  }
-  95% {
-    z-index: 0;
   }
   99% {
     height: 0;
@@ -297,16 +286,12 @@ svg.six {
   z-index: 1;
   box-shadow: 0px -20px 20px 20px #1e1f1f;
   animation: overlayTwo 2s 2.5s forwards;
-  -webkit-animation: overlayTwo 2s 2.5s forwards;
+  -webkit-animation: overlayTwo 1s 2.5s forwards;
   bottom: 0;
-  z-index: 5;
 }
 @keyframes overlayTwo {
   0% {
     height: 100%;
-  }
-  95% {
-    z-index: 0;
   }
   99% {
     height: 0;
@@ -326,15 +311,11 @@ svg.six {
   z-index: 1;
   box-shadow: 4px 20px 20px 20px #1e1f1f;
   animation: overlayThree 2s 3s forwards;
-  -webkit-animation: overlayThree 2s 3s forwards;
-  z-index: 5;
+  -webkit-animation: overlayThree 1s 3s forwards;
 }
 @keyframes overlayThree {
   0% {
     height: 100%;
-  }
-  95% {
-    z-index: 0;
   }
   99% {
     height: 0;

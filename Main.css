@@ -5,8 +5,8 @@ html {
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 0.5s linear 1.25s forwards;
-  -webkit-animation: changeBgColor 0.5s linear 1.25s forwards;
+  animation: changeBgColor 0.5s linear 5s forwards;
+  -webkit-animation: changeBgColor 0.5s linear 5s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,9 +42,9 @@ body {
   max-width: 5rem;
   max-height: 5rem;
   animation-name: fadeOutLogo;
-  animation-duration: 2.5s;
+  animation-duration: 10s;
   animation-delay: 0.17s;
-  animation-timing-function: cubic-bezier(0.24, 0.89);
+  animation-timing-function: cubic-bezier(0.89, 1.49, 1, 0.48);
   opacity: 0;
   fill: black;
 }
@@ -68,7 +68,7 @@ svg.six {
 @keyframes fadeOutLogo {
   0% {
     transform: scale(0);
-    opacity: 100%;
+    opacity: 0%;
     fill: black;
   }
   30% {
@@ -82,13 +82,16 @@ svg.six {
   }
   60% {
     fill: rgb(255, 255, 255);
-    animation-timing-function: cubic-bezier(0.87, 0.82);
+  }
+  94% {
+    opacity: 0;
   }
   95% {
     opacity: 100%;
     animation-duration: 16s;
     transition-duration: 40s;
     fill: rgb(255, 255, 255);
+    opacity: 0;
   }
   100% {
     transform: scale(0);
@@ -123,15 +126,15 @@ svg.six {
 
 /* Start With Slide Styling */
 .grid-container {
-  display: flex;
+  display: none;
   column-gap: 1.5625rem;
   margin: auto;
   width: 63.75rem;
   overflow: hidden;
-  animation: appear 1s linear 1.5s forwards;
+  animation: appear 1s linear 2.5s forwards;
   z-index: 1;
   position: relative;
-  -webkit-animation: appear 1s linear 1.5s forwards;
+  -webkit-animation: appear 1s linear 2.5s forwards;
   opacity: 0;
 }
 @keyframes appear {
@@ -219,9 +222,9 @@ svg.six {
 }
 /* styles for mobile devices */
 @media screen and (max-width: 767px) {
-  .columnThree {
+  /* .columnThree {
     display: none;
-  }
+  } */
   html {
     font-size: 39%;
   }
@@ -264,8 +267,8 @@ svg.six {
   background-color: #1e1f1f;
   z-index: 1;
   box-shadow: 4px 20px 20px 20px #1e1f1f;
-  animation: overlayOne 2s 1s forwards;
-  -webkit-animation: overlayOne 2s 1s forwards;
+  animation: overlayOne 2s 2s forwards;
+  -webkit-animation: overlayOne 2s 2s forwards;
   opacity: 1;
   z-index: 5;
 }
@@ -294,8 +297,8 @@ svg.six {
   background-color: #1e1f1f;
   z-index: 1;
   box-shadow: 0px -20px 20px 20px #1e1f1f;
-  animation: overlayTwo 2s 1.5s forwards;
-  -webkit-animation: overlayTwo 2s 1.5s forwards;
+  animation: overlayTwo 2s 2.5s forwards;
+  -webkit-animation: overlayTwo 2s 2.5s forwards;
   bottom: 0;
   z-index: 5;
 }
@@ -323,8 +326,8 @@ svg.six {
   background-color: #1e1f1f;
   z-index: 1;
   box-shadow: 4px 20px 20px 20px #1e1f1f;
-  animation: overlayThree 2s 2s forwards;
-  -webkit-animation: overlayThree 2s 2s forwards;
+  animation: overlayThree 2s 3s forwards;
+  -webkit-animation: overlayThree 2s 3s forwards;
   z-index: 5;
 }
 @keyframes overlayThree {

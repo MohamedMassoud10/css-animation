@@ -193,10 +193,10 @@ svg.six {
   margin: auto;
   width: 63.75rem;
   overflow: hidden;
-  animation: appear 1s linear 2s forwards;
-  z-index: 1;
+  animation: appear 1s linear 1.15s forwards;
+  z-index: 5;
   position: relative;
-  -webkit-animation: appear 1s linear 2s forwards;
+  -webkit-animation: appear 1s linear 1.15s forwards;
   opacity: 0;
 }
 @keyframes appear {
@@ -284,9 +284,6 @@ svg.six {
 }
 /* styles for mobile devices */
 @media screen and (max-width: 767px) {
-  /* .columnThree {
-    display: none;
-  } */
   html {
     font-size: 39%;
   }
@@ -309,7 +306,7 @@ svg.six {
 }
 
 /* Overlaying */
-
+/* 
 .columnOne-container {
   position: relative;
   z-index: 3;
@@ -330,21 +327,20 @@ svg.six {
   z-index: 1;
   box-shadow: 4px 20px 20px 20px #1e1f1f;
   animation: overlayOne 2s 2s forwards;
-  -webkit-animation: overlayOne 1s 1.6s forwards;
+  -webkit-animation: overlayOne 2s 2s forwards;
   opacity: 1;
+  top: 0;
 }
 @keyframes overlayOne {
   0% {
+    top: 0;
     height: 100%;
   }
   99% {
     height: 0;
   }
-  99.5% {
-    transform: scale(1);
-  }
   100% {
-    transform: scale(0);
+    top: -793px;
   }
 }
 .overlayTwo {
@@ -356,7 +352,7 @@ svg.six {
   box-shadow: 0px -20px 20px 20px #1e1f1f;
   animation: overlayTwo 2s 2.5s forwards;
   -webkit-animation: overlayTwo 1s 2.5s forwards;
-  bottom: 0;
+  top: 0;
 }
 @keyframes overlayTwo {
   0% {
@@ -365,11 +361,8 @@ svg.six {
   99% {
     height: 0;
   }
-  99.5% {
-    transform: scale(1);
-  }
   100% {
-    transform: scale(0);
+    top: 800px;
   }
 }
 .overlayThree {
@@ -381,18 +374,17 @@ svg.six {
   box-shadow: 4px 20px 20px 20px #1e1f1f;
   animation: overlayThree 2s 3s forwards;
   -webkit-animation: overlayThree 1s 3s forwards;
+  top: 0;
 }
 @keyframes overlayThree {
   0% {
+    top: 0;
     height: 100%;
   }
   99% {
     height: 0;
   }
-  99.5% {
-    transform: scale(1);
-  }
   100% {
-    transform: scale(0);
+    top: -793px;
   }
-}
+} */

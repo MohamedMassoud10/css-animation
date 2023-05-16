@@ -50,7 +50,7 @@ body {
   animation-timing-function: cubic-bezier(0.48, 1.33, 1, 0.39);
   /* 0.48, 1.33, 1, 0.39 || 0.66, 1.7, 0.61, 0.44*/
   opacity: 0;
-  fill: rgba(47, 46, 46, 0.129);
+  fill: rgba(0, 0, 0, 0.032);
 }
 
 svg.two {

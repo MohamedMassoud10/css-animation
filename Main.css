@@ -306,7 +306,7 @@ svg.six {
 }
 
 /* Overlaying */
-/* 
+
 .columnOne-container {
   position: relative;
   z-index: 3;
@@ -387,4 +387,4 @@ svg.six {
   100% {
     top: -793px;
   }
-} */
+}

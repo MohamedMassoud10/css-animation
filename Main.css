@@ -5,7 +5,7 @@ html {
 body {
   background-color: white;
   transition: background-color 1s;
-  animation: changeBgColor 0.1s linear 0.98s forwards;
+  animation: changeBgColor 0.04s linear 0.63s forwards;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   -ms-transition: background-color 1s;
   -o-transition: background-color 1s;
   overflow: hidden;
-  -webkit-animation: changeBgColor 0.1s linear 0.98s forwards;
+  -webkit-animation: changeBgColor 0.04s linear 0.63s forwards;
 }
 .container {
   height: 100vh;
@@ -45,7 +45,7 @@ body {
   max-width: 5rem;
   max-height: 5rem;
   animation-name: fadeOutLogo;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-delay: 0.17s;
   animation-timing-function: cubic-bezier(0.48, 1.33, 1, 0.39);
   /* 0.48, 1.33, 1, 0.39 || 0.66, 1.7, 0.61, 0.44*/
@@ -88,7 +88,6 @@ svg.six {
 @keyframes try {
   0% {
     transform: scale(0);
-    opacity: 0%;
     fill: rgba(104, 96, 96, 0.527);
     filter: blur(1px);
     -webkit-filter: blur(1px);
@@ -98,14 +97,13 @@ svg.six {
     -ms-transform: scale(0);
     -o-transform: scale(0);
   }
+  30% {
+    opacity: 0;
+  }
   48% {
-    opacity: 100%;
     transform: scale(7);
     fill: rgb(0, 0, 0);
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-    opacity: 0;
-    -webkit-transform: scale(7);
+    -webkit-transform: scale(8);
     -moz-transform: scale(7);
     -ms-transform: scale(7);
     -o-transform: scale(7);
@@ -113,8 +111,14 @@ svg.six {
   48.79% {
     filter: blur(0);
     -webkit-filter: blur(0);
+    transform: scale(7);
     fill: rgb(255, 255, 255);
+  }
+  55% {
     opacity: 0;
+  }
+  67% {
+    opacity: 1;
   }
   94% {
     filter: blur(0);
@@ -124,12 +128,14 @@ svg.six {
     transform: scale(0);
     filter: blur(1px);
     -webkit-filter: blur(1px);
+    opacity: 0;
   }
   100% {
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-    opacity: 1;
+    fill: transparent;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
     transform: scale(0);
+    opacity: 0;
   }
 }
 @keyframes fadeOutLogo {
@@ -140,20 +146,21 @@ svg.six {
   }
   49% {
     opacity: 100%;
-    transform: scale(7);
+    transform: scale(7.8);
     animation-duration: 3s;
     fill: rgb(0, 0, 0);
-    -webkit-transform: scale(7);
-    -moz-transform: scale(7);
-    -ms-transform: scale(7);
-    -o-transform: scale(7);
+    -webkit-transform: scale(7.8);
+    -moz-transform: scale(7.8);
+    -ms-transform: scale(7.8);
+    -o-transform: scale(7.8);
   }
   49.5% {
     fill: rgb(255, 255, 255);
   }
   100% {
-    fill: white;
+    fill: transparent;
     transform: scale(0);
+    opacity: 0;
   }
 }
 /* media queries */
@@ -180,6 +187,7 @@ svg.six {
 
 /* Start With Slide Styling */
 .grid-container {
+  height: 100vh;
   display: flex;
   column-gap: 1.5625rem;
   margin: auto;

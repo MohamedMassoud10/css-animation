@@ -120,6 +120,13 @@ svg.six {
   67% {
     opacity: 1;
   }
+  90% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
   94% {
     filter: blur(0);
     -webkit-filter: blur(0);
@@ -157,10 +164,16 @@ svg.six {
   49.5% {
     fill: rgb(255, 255, 255);
   }
+  90% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
   100% {
     fill: transparent;
     transform: scale(0);
-    opacity: 0;
   }
 }
 /* media queries */
